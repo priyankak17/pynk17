@@ -1,10 +1,10 @@
-# 🎬 Text-to-Video Generation Portfolio
+# 🎬 Welcome to Priyanka's Portfolio
 
 [![Website](https://img.shields.io/badge/Website-Live-00f0ff?style=for-the-badge)](https://priyankak17.github.io/pynk17/)
 [![License](https://img.shields.io/badge/License-MIT-ff00e5?style=for-the-badge)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-ffea00?style=for-the-badge)](https://github.com/priyankak17)
 
-> A well-rounded portfolio showcasing expertise in **text-to-video generation**, **diffusion models**, and **neural video synthesis**. 
+> A well-rounded portfolio showcasing expertise in **video generation**, **diffusion models**, and **multimodal training**. 
 
 <div align="center">
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white" alt="PyTorch"/>
@@ -13,95 +13,6 @@
   <img src="https://img.shields.io/badge/Diffusion_Models-FF6B6B?style=flat" alt="Diffusion"/>
   <img src="https://img.shields.io/badge/Neural_Rendering-4ECDC4?style=flat" alt="NeRF"/>
 </div>
-
----
-
-## 🚀 Portfolio Overview
-
-I have attempted to showcase my passion for advanced research and engineering work in the text-to-video generation domain. 
-
-
-
-## 📂 Featured Projects
-
-### 🔹 Project 1: Neural Video Synthesis
-**Diffusion-based text-to-video generation model**
-
-- Trained on 10M+ video-text pairs using distributed training
-- Implements 3D attention mechanisms for temporal coherence
-- Incorporates motion priors and optical flow guidance
-- **Tech Stack:** PyTorch, Diffusion Models, 3D-UNet Architecture
-
-### 🔹 Project 2: Temporal Consistency Engine
-**Novel architecture for extended video sequences**
-
-- Maintains object permanence across 100+ frame sequences
-- Cross-frame attention with optical flow integration
-- Reduces flickering and temporal artifacts by 87%
-- **Tech Stack:** Transformers, LSTM, Optical Flow Networks
-
-### 🔹 Project 3: Multi-Modal Video Generation
-**Unified system for text, image, and audio-conditioned synthesis**
-
-- Integrates CLIP embeddings with latent diffusion models
-- Supports controllable video generation from multiple modalities
-- End-to-end training with joint embedding space
-- **Tech Stack:** CLIP, VAE, Multi-Modal Transformers
-
-### 🔹 Project 4: Real-Time Video Stylization
-**Production-ready neural rendering pipeline**
-
-- Achieves 24fps on consumer GPUs (RTX 3080)
-- Knowledge distillation from large teacher models
-- Efficient attention mechanisms with linear complexity
-- **Tech Stack:** Neural Rendering, CUDA Kernels, TensorRT
-
-### 🔹 Project 5: 4D Scene Generation
-**Dynamic scene synthesis with camera control**
-
-- Combines NeRF with generative models for 4D content
-- Enables temporal manipulation and camera trajectory control
-- Novel view synthesis with temporal consistency
-- **Tech Stack:** NeRF, 3D Vision, Generative Adversarial Networks
-
----
-
-## 🛠️ Technical Skills
-
-<table>
-<tr>
-<td valign="top" width="50%">
-
-### Deep Learning
-- Diffusion Models (DDPM, DDIM, Latent Diffusion)
-- Transformer Architectures (ViT, Video Transformers)
-- Generative Models (GANs, VAEs, Normalizing Flows)
-- Neural Rendering (NeRF, Neural Volumes)
-
-### Video & Computer Vision
-- Temporal Modeling & Sequence Processing
-- Optical Flow & Motion Estimation
-- 3D Convolutions & Spatiotemporal Features
-- Object Tracking & Video Understanding
-
-</td>
-<td valign="top" width="50%">
-
-### Frameworks & Tools
-- **PyTorch** (PyTorch Lightning, DDP)
-- **TensorFlow** & **JAX/Flax**
-- **Hugging Face** Transformers & Diffusers
-- **CUDA** & GPU Optimization
-
-### Infrastructure
-- Distributed Training (Multi-GPU, Multi-Node)
-- Model Optimization (Quantization, Pruning)
-- MLOps & Deployment (Docker, Kubernetes)
-- Cloud Platforms (AWS, GCP, Azure)
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -117,16 +28,6 @@ Visit the portfolio at: **[priyankak17.github.io](https://priyankak17.github.io/
 - **Neural Rendering** - Real-time synthesis, novel view generation
 - **Video Understanding** - Spatiotemporal reasoning, long-range dependencies
 - **Generative AI** - Foundation models, scaling laws, emergent capabilities
-
----
-
-## 📚 Publications & Talks
-
-- Conference papers (CVPR, ICCV, NeurIPS, ICLR, SIGGRAPH)
-- Workshop presentations
-- Technical blog posts
-- Open-source contributions
-- Patent filings
 
 ---
 
@@ -154,14 +55,6 @@ I'm actively seeking opportunities in:
 </div>
 
 ---
-
-## 📄 License
-
-This portfolio website is released under the **MIT License**. Feel free to use the design as inspiration for your own portfolio, but please create your own content.
-
-```
-MIT License - Copyright (c) 2024
-```
 
 
 ## 🔗 Quick Links
