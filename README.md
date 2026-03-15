@@ -1,8 +1,8 @@
 # 🎬 Text-to-Video Generation Portfolio
 
-[![Website](https://img.shields.io/badge/Website-Live-00f0ff?style=for-the-badge)](https://yourusername.github.io)
+[![Website](https://img.shields.io/badge/Website-Live-00f0ff?style=for-the-badge)](https://priyankak17.github.io/pynk17/)
 [![License](https://img.shields.io/badge/License-MIT-ff00e5?style=for-the-badge)](LICENSE)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-ffea00?style=for-the-badge)](https://github.com/yourusername)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-ffea00?style=for-the-badge)](https://github.com/priyankak17)
 
 > A cutting-edge portfolio showcasing expertise in **text-to-video generation**, **diffusion models**, and **neural video synthesis**. Built for researchers and engineers pushing the boundaries of generative AI.
 
@@ -142,7 +142,7 @@ This repository contains a **futuristic, interactive portfolio website** designe
 ## 🚀 Quick Start
 
 ### View Live Site
-Visit the portfolio at: **[yourusername.github.io](https://yourusername.github.io)**
+Visit the portfolio at: **[priyankak17.github.io](https://priyankak17.github.io/pynk17/)**
 
 ### Local Development
 
@@ -266,9 +266,9 @@ I'm actively seeking opportunities in:
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-your.email@example.com-00f0ff?style=for-the-badge&logo=gmail)](mailto:your.email@example.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-ff00e5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-ffea00?style=for-the-badge&logo=github)](https://github.com/yourusername)
+[![Email](https://img.shields.io/badge/Email-your.email@example.com-00f0ff?style=for-the-badge&logo=gmail)](mailto:kamilapriyanka17@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-ff00e5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/priyankakamila)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-ffea00?style=for-the-badge&logo=github)](https://github.com/priyankak17)
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-00f0ff?style=for-the-badge&logo=twitter)](https://twitter.com/yourhandle)
 
 </div>
@@ -308,10 +308,10 @@ MIT License - Copyright (c) 2024
 
 ## 🔗 Quick Links
 
-- [Live Portfolio](https://yourusername.github.io)
-- [GitHub Profile](https://github.com/yourusername)
+- [Live Portfolio](https://priyankak17.github.io/pynk17/)
+- [GitHub Profile](https://github.com/priyankak17)
 - [Research Papers](https://scholar.google.com/citations?user=YOUR_ID)
-- [LinkedIn](https://linkedin.com/in/yourprofile)
+- [LinkedIn](https://linkedin.com/in/priyankakamila)
 
 ---
 
