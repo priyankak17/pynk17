@@ -376,6 +376,139 @@
             margin-bottom: 10px;
         }
 
+        /* Talks & Speaking Section */
+        .talk-card {
+            position: relative;
+            padding: 40px;
+            background: rgba(15, 20, 32, 0.6);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .talk-card:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 40px var(--glow-cyan);
+            transform: translateY(-5px);
+        }
+
+        .talk-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .talk-event-badge {
+            display: inline-block;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-magenta);
+            border: 1px solid rgba(255, 0, 110, 0.4);
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        .talk-date {
+            font-size: 13px;
+            color: var(--accent-electric);
+            letter-spacing: 1px;
+        }
+
+        .talk-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .talk-venue {
+            font-size: 15px;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+        }
+
+        .talk-abstract {
+            font-size: 14px;
+            line-height: 1.9;
+            color: var(--text-secondary);
+            max-width: 900px;
+            margin-bottom: 24px;
+        }
+
+        .talk-abstract em {
+            color: var(--accent-electric);
+            font-style: italic;
+        }
+
+        .talk-audience {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .talk-audience span {
+            color: var(--accent-electric);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-right: 8px;
+        }
+
+        .talk-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .talk-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .talk-link {
+            display: inline-block;
+            padding: 12px 28px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .talk-link-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+            color: var(--bg-primary);
+            font-weight: 600;
+        }
+
+        .talk-link-primary:hover {
+            box-shadow: 0 0 25px var(--glow-cyan);
+            transform: translateY(-2px);
+        }
+
+        .talk-link-secondary {
+            background: transparent;
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+        }
+
+        .talk-link-secondary:hover {
+            background: rgba(0, 240, 255, 0.08);
+            box-shadow: 0 0 15px var(--glow-cyan);
+        }
+
         /* Projects Grid */
         .projects-grid {
             display: grid;
@@ -504,6 +637,7 @@
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s ease;
+            word-break: break-word;
         }
 
         .contact-item a:hover {
@@ -530,6 +664,7 @@
 
             .nav-links {
                 gap: 20px;
+                flex-wrap: wrap;
             }
 
             .hero {
@@ -554,6 +689,18 @@
 
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .talk-card {
+                padding: 24px;
+            }
+
+            .talk-links {
+                flex-direction: column;
+            }
+
+            .talk-link {
+                text-align: center;
             }
         }
 
@@ -595,6 +742,7 @@
                 <div class="logo">PK</div>
                 <ul class="nav-links">
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#talks">Talks</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -615,7 +763,7 @@
                 </p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="https://github.com/priyankak17" target="_blank" class="btn btn-secondary">View GitHub</a>
+                    <a href="https://github.com/priyankak17" target="_blank" rel="noopener" class="btn btn-secondary">View GitHub</a>
                 </div>
             </div>
         </section>
@@ -630,7 +778,7 @@
                 <div class="timeline-item">
                     <div class="timeline-date">Sep 2024 – Present</div>
                     <h3 class="timeline-title">AI Software Developer</h3>
-                    <div class="timeline-company">Mo-Sys Engineering Ltd., R&D Team · London, UK</div>
+                    <div class="timeline-company">Mo-Sys Engineering Ltd., R&amp;D Team · London, UK</div>
                     <div class="timeline-description">
                         <ul>
                             <li>Led end-to-end training of multimodal policies for text- and vision-conditioned video/action generation</li>
@@ -661,9 +809,9 @@
                     <div class="timeline-company">Tata Consultancy Services · India</div>
                     <div class="timeline-description">
                         <ul>
-                            <li>Led enterprise scale infrastructure migration with zero data loss</li>
-                            <li>Engineered production grade systems with full unit testing, CI/CD pipelines</li>
-                            <li>Served as Technical incident lead, resolving high-impact system bottlenecks</li>
+                            <li>Led enterprise-scale infrastructure migration with zero data loss</li>
+                            <li>Engineered production-grade systems with full unit testing, CI/CD pipelines</li>
+                            <li>Served as technical incident lead, resolving high-impact system bottlenecks</li>
                         </ul>
                     </div>
                 </div>
@@ -678,6 +826,44 @@
                             <li>Analyzed patents, IEEE research papers, and emerging ML/CV algorithms</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Talks & Speaking Section -->
+        <section id="talks">
+            <div class="section-header">
+                <div class="section-label">Thought Leadership</div>
+                <h2 class="section-title">Talks &amp; Speaking</h2>
+            </div>
+
+            <div class="talk-card">
+                <div class="talk-header">
+                    <span class="talk-event-badge">Conference Speaker · MLOps Track</span>
+                    <span class="talk-date">June 2026</span>
+                </div>
+                <h3 class="talk-title">Run | Keeping Models Reliable in Live Systems</h3>
+                <div class="talk-venue">AI Summit London · Tobacco Dock, London</div>
+                <p class="talk-abstract">
+                    Most production AI failures aren't model failures — they're dependency failures. This session 
+                    explored why well-trained models silently degrade in the real world, covering practical approaches 
+                    to monitoring, evaluation, drift detection, guardrails, and operational reliability for production 
+                    AI deployments. Built around the through-line: <em>"A model is a photograph of a moving world."</em>
+                </p>
+                <p class="talk-audience">
+                    <span>Audience</span> Industry practitioners, researchers, and AI product teams
+                </p>
+                <div class="talk-topics">
+                    <span class="tech-tag">Production Monitoring</span>
+                    <span class="tech-tag">Model Evaluation</span>
+                    <span class="tech-tag">Drift Detection</span>
+                    <span class="tech-tag">Data Contracts</span>
+                    <span class="tech-tag">Guardrails</span>
+                    <span class="tech-tag">Reliability Budgets</span>
+                </div>
+                <div class="talk-links">
+                    <a href="talks/ai-summit-london-2026-model-reliability/" class="talk-link talk-link-primary">Talk Page</a>
+                    <a href="talks/ai-summit-london-2026-model-reliability/slides.pdf" class="talk-link talk-link-secondary">Slides (PDF · 11 slides)</a>
                 </div>
             </div>
         </section>
@@ -708,7 +894,7 @@
                     <h3 class="project-title">Real-time Sign Language Generation</h3>
                     <p class="project-description">
                         Prototyped a real-time Sign Language Generation proof-of-concept within 48 hours using 
-                        Mediapipe and pose estimation models for gesture-to-avatar translation.
+                        MediaPipe and pose estimation models for gesture-to-avatar translation.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">MediaPipe</span>
@@ -756,22 +942,22 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>AI & Machine Learning</h3>
+                    <h3>AI &amp; Machine Learning</h3>
                     <p>PyTorch, TensorFlow, Transformers, Diffusion Models, Neural Networks, CLIP, StyleGAN, 
                        Model Training, Hyperparameter Tuning, Algorithm Development</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Infrastructure & MLOps</h3>
+                    <h3>Infrastructure &amp; MLOps</h3>
                     <p>Docker, Kubernetes, CI/CD, GPUs (CUDA), GCP, AWS (S3, Lambda), Azure Compute, 
                        FastAPI, Flask, Distributed Training</p>
                 </div>
                 <div class="skill-category">
                     <h3>Computer Vision</h3>
-                    <p>OpenCV, Semantic Segmentation, Vision-Language Models, Video & Trajectory Data, 
+                    <p>OpenCV, Semantic Segmentation, Vision-Language Models, Video &amp; Trajectory Data, 
                        Multimodal Learning, Image Processing</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Programming & Tools</h3>
+                    <h3>Programming &amp; Tools</h3>
                     <p>Python, C++, Bash, SQL, NumPy, Pandas, Matplotlib, Scikit-learn, 
                        Data Pipelines, Synthetic Data Generation</p>
                 </div>
@@ -798,19 +984,19 @@
                 <div class="contact-item">
                     <div class="contact-icon">💼</div>
                     <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/priyankakamila" target="_blank">linkedin.com/in/priyankakamila</a>
+                    <a href="https://linkedin.com/in/priyankakamila" target="_blank" rel="noopener">linkedin.com/in/priyankakamila</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">💻</div>
                     <h3>GitHub</h3>
-                    <a href="https://github.com/priyankak17" target="_blank">github.com/priyankak17</a>
+                    <a href="https://github.com/priyankak17" target="_blank" rel="noopener">github.com/priyankak17</a>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2024 Priyanka Kamila. Built with neural networks in mind.</p>
+            <p>&copy; 2026 Priyanka Kamila. Built with neural networks in mind.</p>
         </footer>
     </div>
 
@@ -833,7 +1019,6 @@
                 this.baseX = this.x;
                 this.baseY = this.y;
                 this.density = (Math.random() * 30) + 1;
-                this.distance = 0;
                 this.vx = (Math.random() - 0.5) * 0.5;
                 this.vy = (Math.random() - 0.5) * 0.5;
             }
@@ -847,29 +1032,25 @@
             }
 
             update() {
-                // Calculate distance from mouse
-                let dx = mouse.x - this.x;
-                let dy = mouse.y - this.y;
-                let distance = Math.sqrt(dx * dx + dy * dy);
-                let forceDirectionX = dx / distance;
-                let forceDirectionY = dy / distance;
-                let maxDistance = mouse.radius;
-                let force = (maxDistance - distance) / maxDistance;
-                let directionX = forceDirectionX * force * this.density;
-                let directionY = forceDirectionY * force * this.density;
+                // Only apply mouse force when mouse is on the page
+                if (mouse.x !== null && mouse.y !== null) {
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < mouse.radius) {
-                    this.x -= directionX;
-                    this.y -= directionY;
+                    if (distance > 0 && distance < mouse.radius) {
+                        let forceDirectionX = dx / distance;
+                        let forceDirectionY = dy / distance;
+                        let force = (mouse.radius - distance) / mouse.radius;
+                        this.x -= forceDirectionX * force * this.density;
+                        this.y -= forceDirectionY * force * this.density;
+                    } else {
+                        this.x -= (this.x - this.baseX) / 10;
+                        this.y -= (this.y - this.baseY) / 10;
+                    }
                 } else {
-                    if (this.x !== this.baseX) {
-                        let dx = this.x - this.baseX;
-                        this.x -= dx / 10;
-                    }
-                    if (this.y !== this.baseY) {
-                        let dy = this.y - this.baseY;
-                        this.y -= dy / 10;
-                    }
+                    this.x -= (this.x - this.baseX) / 10;
+                    this.y -= (this.y - this.baseY) / 10;
                 }
 
                 // Add gentle drift
