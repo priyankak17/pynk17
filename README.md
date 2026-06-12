@@ -47,7 +47,7 @@ I'm actively seeking opportunities in:
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-your.email@example.com-00f0ff?style=for-the-badge&logo=gmail)](mailto:kamilapriyanka17@gmail.com)
+[![Email](https://img.shields.io/badge/Email-kamilapriyanka17@gmail.com-00f0ff?style=for-the-badge&logo=gmail)](mailto:kamilapriyanka17@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-ff00e5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/priyankakamila)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-ffea00?style=for-the-badge&logo=github)](https://github.com/priyankak17)
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-00f0ff?style=for-the-badge&logo=twitter)](https://twitter.com/yourhandle)
@@ -61,7 +61,6 @@ I'm actively seeking opportunities in:
 
 - [Live Portfolio](https://priyankak17.github.io/pynk17/)
 - [GitHub Profile](https://github.com/priyankak17)
-- [Research Papers](https://scholar.google.com/citations?user=YOUR_ID)
 - [LinkedIn](https://linkedin.com/in/priyankakamila)
 
 ---
