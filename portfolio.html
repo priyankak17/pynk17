@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Engineering Portfolio | Priyanka Kamila</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=IBM+Plex+Mono:wght@300;400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #0f1420;
+            --accent-cyan: #00f0ff;
+            --accent-magenta: #ff006e;
+            --accent-electric: #7df9ff;
+            --text-primary: #e8f0f2;
+            --text-secondary: #8b9bb3;
+            --glow-cyan: rgba(0, 240, 255, 0.3);
+            --glow-magenta: rgba(255, 0, 110, 0.3);
+        }
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        .bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(0,240,255,.12), transparent 35%),
+                radial-gradient(circle at 85% 70%, rgba(255,0,110,.10), transparent 35%);
+        }
+        .wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px 80px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 34px 0;
+            gap: 24px;
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 22px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        .hero {
+            padding: 90px 0 70px;
+        }
+        .eyebrow {
+            color: var(--accent-electric);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(42px, 7vw, 88px);
+            line-height: 1.05;
+            margin-bottom: 22px;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-cyan), var(--accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            max-width: 900px;
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 28px;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+            color: var(--bg-primary);
+            font-weight: 700;
+        }
+        .btn-secondary {
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0,240,255,.4);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 18px;
+            margin: 10px 0 90px;
+        }
+        .metric {
+            padding: 24px;
+            border: 1px solid rgba(0,240,255,.18);
+            background: rgba(15,20,32,.62);
+            border-radius: 8px;
+        }
+        .metric strong {
+            display: block;
+            font-family: 'Syne', sans-serif;
+            font-size: 24px;
+            color: var(--accent-cyan);
+            margin-bottom: 6px;
+        }
+        .metric span { color: var(--text-secondary); font-size: 12px; }
+
+        .section {
+            margin-top: 90px;
+        }
+        .section-label {
+            font-size: 11px;
+            color: var(--accent-electric);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(28px, 4vw, 48px);
+            margin-bottom: 30px;
+        }
+
+        .case-grid {
+            display: grid;
+            gap: 24px;
+        }
+        .case {
+            background: rgba(15,20,32,.7);
+            border: 1px solid rgba(0,240,255,.18);
+            border-radius: 8px;
+            padding: 30px;
+        }
+        .case:hover {
+            border-color: rgba(255,0,110,.65);
+            box-shadow: 0 0 28px rgba(255,0,110,.12);
+        }
+        .case-tag {
+            color: var(--accent-magenta);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 10px;
+            margin-bottom: 8px;
+        }
+        .case h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .case p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+        .bullets {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin: 0 0 20px 18px;
+        }
+        .bullets li { margin-bottom: 8px; }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .tag {
+            color: var(--accent-electric);
+            border: 1px solid rgba(0,240,255,.25);
+            background: rgba(0,240,255,.07);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .links a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 12px;
+            border-bottom: 1px solid rgba(0,240,255,.35);
+        }
+        .links a:hover { color: var(--accent-magenta); }
+
+        .experiment-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .experiment-table th,
+        .experiment-table td {
+            border-bottom: 1px solid rgba(0,240,255,.12);
+            padding: 14px 12px;
+            text-align: left;
+        }
+        .experiment-table th {
+            color: var(--accent-electric);
+            background: rgba(15,20,32,.9);
+        }
+        .experiment-table td {
+            color: var(--text-secondary);
+            background: rgba(15,20,32,.45);
+        }
+
+        footer {
+            margin-top: 100px;
+            border-top: 1px solid rgba(0,240,255,.12);
+            padding-top: 34px;
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        @media (max-width: 700px) {
+            .wrap { padding: 0 18px 60px; }
+            nav { align-items: flex-start; flex-direction: column; }
+            .hero { padding-top: 55px; }
+            .experiment-table { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="wrap">
+    <nav>
+        <div class="logo">PK / PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#case-studies">Case Studies</a>
+            <a href="#notebooks">Notebooks</a>
+            <a href="https://huggingface.co/pynk17" target="_blank" rel="noopener">Hugging Face</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="eyebrow">Machine Learning Engineering Portfolio</div>
+        <h1>FROM MODEL TRAINING<br>TO SYSTEMS TRADEOFFS</h1>
+        <p>
+            A practical portfolio of deep learning experiments built in PyTorch and the Hugging Face ecosystem.
+            The work moves from tensor fundamentals into diffusion model training, Stable Diffusion fine-tuning,
+            precision and memory optimization, and parameter-efficient adaptation of a 7B language model.
+            The focus is not only on getting models to run, but on understanding architecture choices,
+            reproducibility, inference behavior, checkpointing, and deployment-ready artifacts.
+        </p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/priyankak17/Deep-Learning-using-PyTorch" target="_blank" rel="noopener">View Notebook Repository</a>
+            <a class="btn btn-secondary" href="https://huggingface.co/pynk17" target="_blank" rel="noopener">View Model Artifacts</a>
+        </div>
+    </section>
+
+    <section class="summary-grid">
+        <div class="metric"><strong>7+</strong><span>technical notebooks spanning fundamentals, diffusion, Stable Diffusion and PEFT</span></div>
+        <div class="metric"><strong>6</strong><span>published model artifacts across diffusion and language modeling experiments</span></div>
+        <div class="metric"><strong>7B</strong><span>parameter base model adapted with LoRA while training ~0.11% of parameters</span></div>
+        <div class="metric"><strong>3-way</strong><span>controlled Stable Diffusion comparison across FP32, FP16 and gradient checkpointing</span></div>
+    </section>
+
+    <section class="section" id="case-studies">
+        <div class="section-label">Selected work</div>
+        <h2>Case Studies</h2>
+        <div class="case-grid">
+
+            <article class="case">
+                <div class="case-tag">Diffusion Systems Experiment</div>
+                <h3>Stable Diffusion v1.5: FP32 vs FP16 vs Gradient Checkpointing</h3>
+                <p>
+                    Fine-tuned Stable Diffusion v1.5 on Naruto image-caption data and structured the work as a controlled
+                    systems comparison rather than a one-off model run.
+                </p>
+                <ul class="bullets">
+                    <li>Shared setup across three runs to isolate precision and memory configuration changes.</li>
+                    <li>Compared FP32 baseline, FP16 mixed precision, and FP16 with gradient checkpointing.</li>
+                    <li>Used a fixed inference seed, prompt suite, guidance scale and diffusion-step count for comparison.</li>
+                    <li>Published each run as a separate Hugging Face Diffusers pipeline with model documentation.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Stable Diffusion</span><span class="tag">Diffusers</span><span class="tag">FP16</span>
+                    <span class="tag">Gradient Checkpointing</span><span class="tag">TensorBoard</span>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/Stable_diff_fine_tuning.ipynb" target="_blank" rel="noopener">Notebook</a>
+                    <a href="https://huggingface.co/pynk17/sd-naruto-fp32-baseline" target="_blank" rel="noopener">FP32 model</a>
+                    <a href="https://huggingface.co/pynk17/sd-naruto-fp16" target="_blank" rel="noopener">FP16 model</a>
+                    <a href="https://huggingface.co/pynk17/sd-naruto-fp16-grad-checkpointing" target="_blank" rel="noopener">FP16 + GC model</a>
+                </div>
+            </article>
+
+            <article class="case">
+                <div class="case-tag">Custom Generative Model</div>
+                <h3>Few-shot UNet2D DDPM at 256 × 256</h3>
+                <p>
+                    Built and trained a custom unconditional diffusion model with Hugging Face Diffusers using a six-stage
+                    UNet2D architecture, attention blocks, BF16 mixed precision and a 1,000-step DDPM scheduler.
+                </p>
+                <ul class="bullets">
+                    <li>Trained on a small 272-example dataset to explore behavior in a constrained-data regime.</li>
+                    <li>Used batch size 8 with gradient accumulation 4 for an effective batch size of 32.</li>
+                    <li>Tracked learning-rate warmup, loss dynamics, throughput, periodic sampling and checkpoint cadence.</li>
+                    <li>Published the resulting pipeline and a reproducibility-focused Hugging Face model card.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">UNet2DModel</span><span class="tag">DDPM</span><span class="tag">BF16</span>
+                    <span class="tag">Few-shot</span><span class="tag">PyTorch</span>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/pynk_fewshot_unet2d_diff_model.ipynb" target="_blank" rel="noopener">Notebook</a>
+                    <a href="https://huggingface.co/pynk17/pk_fewshot-aur-model" target="_blank" rel="noopener">Hugging Face model</a>
+                </div>
+            </article>
+
+            <article class="case">
+                <div class="case-tag">Parameter-Efficient LLM Fine-Tuning</div>
+                <h3>BLOOM-7B1 LoRA with PEFT</h3>
+                <p>
+                    Fine-tuned BLOOM-7B1 using LoRA adapters on an English quotes dataset, freezing the base model and
+                    updating only a small adapter parameter set.
+                </p>
+                <ul class="bullets">
+                    <li>7,864,320 trainable parameters out of 7,076,880,384 total, roughly 0.11%.</li>
+                    <li>Used FP16, gradient checkpointing, batch size 4 and gradient accumulation 4.</li>
+                    <li>Completed 200 optimizer steps with a reported aggregate training loss of 2.3122.</li>
+                    <li>Stored the resulting adapter as an approximately 31.5 MB Safetensors artifact.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Transformers</span><span class="tag">PEFT</span><span class="tag">LoRA</span>
+                    <span class="tag">BLOOM-7B1</span><span class="tag">FP16</span>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/PEFT_Finetune_Bloom7B_LoRa.ipynb" target="_blank" rel="noopener">Notebook</a>
+                    <a href="https://huggingface.co/pynk17/pkbloom-7b1-lora" target="_blank" rel="noopener">Hugging Face adapter</a>
+                </div>
+            </article>
+
+            <article class="case">
+                <div class="case-tag">Foundational Diffusion Work</div>
+                <h3>UNet Diffusion Baselines and Architecture Iteration</h3>
+                <p>
+                    Progressed from a small diffusion baseline to modified UNet experiments before moving into the larger
+                    few-shot and Stable Diffusion studies. These notebooks focus on understanding the denoising process,
+                    scheduler behavior, architecture changes and generated samples from first principles.
+                </p>
+                <div class="tags">
+                    <span class="tag">UNet</span><span class="tag">Noise Scheduling</span><span class="tag">Denoising</span><span class="tag">PyTorch</span>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/basic_unet_diffusion_model_training.ipynb" target="_blank" rel="noopener">Baseline notebook</a>
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/modified_unet_diffusion_model_training.ipynb" target="_blank" rel="noopener">Modified UNet notebook</a>
+                    <a href="https://huggingface.co/pynk17/my-small_diff-model" target="_blank" rel="noopener">Small diffusion model</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-label">Controlled comparison</div>
+        <h2>Stable Diffusion Experiment Matrix</h2>
+        <table class="experiment-table">
+            <thead>
+                <tr><th>Run</th><th>Precision</th><th>Gradient Checkpointing</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>sd-naruto-fp32-baseline</td><td>FP32</td><td>No</td><td>Reference configuration</td></tr>
+                <tr><td>sd-naruto-fp16</td><td>FP16</td><td>No</td><td>Mixed-precision comparison</td></tr>
+                <tr><td>sd-naruto-fp16-grad-checkpointing</td><td>FP16</td><td>Yes</td><td>Memory-oriented configuration</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="section" id="notebooks">
+        <div class="section-label">Repository map</div>
+        <h2>Notebook Progression</h2>
+        <div class="case-grid">
+            <article class="case">
+                <h3>Foundations</h3>
+                <p>Deep learning concepts, PyTorch tensors, shapes, dimensionality and basic mechanics.</p>
+                <div class="links">
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/PyTorch_DL_Overview_00.ipynb" target="_blank" rel="noopener">PyTorch_DL_Overview_00.ipynb</a>
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/PyTorch_Basics_01.ipynb" target="_blank" rel="noopener">PyTorch_Basics_01.ipynb</a>
+                </div>
+            </article>
+            <article class="case">
+                <h3>Diffusion Models</h3>
+                <p>Baseline UNet diffusion training, architecture modification, and a larger few-shot DDPM experiment.</p>
+                <div class="links">
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/basic_unet_diffusion_model_training.ipynb" target="_blank" rel="noopener">basic_unet_diffusion_model_training.ipynb</a>
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/modified_unet_diffusion_model_training.ipynb" target="_blank" rel="noopener">modified_unet_diffusion_model_training.ipynb</a>
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/pynk_fewshot_unet2d_diff_model.ipynb" target="_blank" rel="noopener">pynk_fewshot_unet2d_diff_model.ipynb</a>
+                </div>
+            </article>
+            <article class="case">
+                <h3>Fine-Tuning and Adaptation</h3>
+                <p>Stable Diffusion precision experiments and parameter-efficient fine-tuning of BLOOM-7B1.</p>
+                <div class="links">
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/Stable_diff_fine_tuning.ipynb" target="_blank" rel="noopener">Stable_diff_fine_tuning.ipynb</a>
+                    <a href="https://github.com/priyankak17/Deep-Learning-using-PyTorch/blob/main/PEFT_Finetune_Bloom7B_LoRa.ipynb" target="_blank" rel="noopener">PEFT_Finetune_Bloom7B_LoRa.ipynb</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-label">What this portfolio demonstrates</div>
+        <h2>Engineering Themes</h2>
+        <div class="case-grid">
+            <article class="case">
+                <p>
+                    Model architecture experimentation, controlled training comparisons, mixed precision,
+                    gradient accumulation, gradient checkpointing, diffusion schedulers, checkpoint management,
+                    PEFT/LoRA, reproducibility, inference testing, model cards, and publishing deployable artifacts
+                    to the Hugging Face Hub.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        Priyanka Kamila · ML / AI Engineering Portfolio ·
+        <a href="index.html" style="color:#00f0ff;text-decoration:none;">Back to landing page</a>
+    </footer>
+</div>
+</body>
+</html>
