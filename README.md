@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-ff00e5?style=for-the-badge)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-ffea00?style=for-the-badge)](https://github.com/priyankak17)
 
-> A well-rounded portfolio showcasing expertise in **video generation**, **diffusion models**, and **multimodal training**. 
+> Portfolio here attemps to showcasing my expertise in **video generation**, **diffusion models**, and **multimodal training**. 
 
 <div align="center">
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white" alt="PyTorch"/>
