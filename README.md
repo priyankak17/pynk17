@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/Transformers-FFD21E?style=flat&logo=huggingface&logoColor=black" alt="Transformers"/>
   <img src="https://img.shields.io/badge/Computer_Vision-00ADD8?style=flat&logo=opencv&logoColor=white" alt="CV"/>
   <img src="https://img.shields.io/badge/Diffusion_Models-FF6B6B?style=flat" alt="Diffusion"/>
-  <img src="https://img.shields.io/badge/Neural_Rendering-4ECDC4?style=flat" alt="NeRF"/>
+
 </div>
 
 ---
@@ -19,7 +19,9 @@
 ## 🚀 Quick Start
 
 ### View Live Site
-Visit the portfolio at: **[priyankak17.github.io](https://priyankak17.github.io/pynk17/)**
+Visit the website at: **[priyankak17.github.io](https://priyankak17.github.io/pynk17/)**
+
+Visit HuggingFace at: **[Hugging Face Profile](https://huggingface.co/pynk17)**
 
 ## 🎓 Research Interests
 
